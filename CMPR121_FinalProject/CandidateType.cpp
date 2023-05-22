@@ -8,6 +8,7 @@
 
 
 #include "CandidateType.h"
+#include <iostream>
 #include <string>
 
 /****   DEFAULT CONSTRUCTOR   ****/
@@ -31,6 +32,8 @@ CandidateType::CandidateType(std::string fName, std::string lName, int ssn)
 /****   UPDATES VOTES BY CAMPUS   ****/
 void CandidateType::updateVotesByCampus(int campusNum, int numVotes) {
 	campuses[campusNum - 1] = numVotes;
+
+	CandidateType::numVotes += campuses[campusNum - 1];
 }
 
 /****   GETS TOTAL VOTES   ****/
@@ -46,6 +49,18 @@ int CandidateType::getVotesByCampus(int campusNum) const {
 /****   PRINTS PERSON INFO   ****/
 void CandidateType::printCandidateInfo() const {
 	printPersonInfo();
+}
+
+/****   PRINTS CANDIDATE TOTAL VOTES   ****/
+void CandidateType::printCandidateTotalVotes() const {
+	std::cout << getLastName() << ", " << getFirstName() << '\n';
+	std::cout << "\tTotal Votes (all campuses): " << '\n';
+}
+
+/****   PRINTS CANDIDATE VOTES BY CAMPUS   ****/
+void CandidateType::printCandidateCampusVotes(int campusNum) const {
+	std::cout << getLastName() << ", " << getFirstName() << '\n';
+	std::cout << "\tCampus " << campusNum << " total votes: " << '\n';
 }
 
 /****   DESTRUCTOR   ****/

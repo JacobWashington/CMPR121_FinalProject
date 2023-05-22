@@ -39,6 +39,12 @@ public:
 	/****   PRINTS PERSON INFO   ****/
 	void printCandidateInfo() const;
 
+	/****   PRINTS CANDIDATE TOTAL VOTES   ****/
+	void printCandidateTotalVotes() const;
+
+	/****   PRINTS CANDIDATE VOTES BY CAMPUS   ****/
+	void printCandidateCampusVotes(int campusNum) const;
+
 	/****   DESTRUCTOR   ****/
 	~CandidateType();
 };

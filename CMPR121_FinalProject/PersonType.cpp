@@ -6,9 +6,9 @@
     DESCRIPTION: PERSON_TYPE CLASS IMPLEMENTATION FILE
 */
 
+#include "PersonType.h"
 #include <iostream>
 #include <string>
-#include "PersonType.h"
 
 using namespace std;
 
