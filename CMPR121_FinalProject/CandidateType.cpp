@@ -54,13 +54,13 @@ void CandidateType::printCandidateInfo() const {
 /****   PRINTS CANDIDATE TOTAL VOTES   ****/
 void CandidateType::printCandidateTotalVotes() const {
 	std::cout << getLastName() << ", " << getFirstName() << '\n';
-	std::cout << "\tTotal Votes (all campuses): " << '\n';
+	std::cout << "\tTotal Votes (all campuses): " << getTotalVotes() << '\n';
 }
 
 /****   PRINTS CANDIDATE VOTES BY CAMPUS   ****/
 void CandidateType::printCandidateCampusVotes(int campusNum) const {
 	std::cout << getLastName() << ", " << getFirstName() << '\n';
-	std::cout << "\tCampus " << campusNum << " total votes: " << '\n';
+	std::cout << "\tCampus " << campusNum << " total votes: " << getVotesByCampus(campusNum) << '\n';
 }
 
 /****   DESTRUCTOR   ****/

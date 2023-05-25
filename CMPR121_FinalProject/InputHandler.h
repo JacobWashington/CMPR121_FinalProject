@@ -22,6 +22,7 @@ void createCandidateList(std::ifstream& infile, CandidateList& candidateList)
 		infile >> ssn;
 	}
 }
+
 void readCandidateData(CandidateList& candidateList)
 {
 	std::ifstream infile;
